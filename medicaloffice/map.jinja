@@ -1,0 +1,2 @@
+{% import_yaml 'medicaloffice/config/defaults.yaml' as preconfig %}
+{% set config = salt.pillar.get( 'medicaloffice', default=preconfig.medicaloffice, merge=True ) %}
