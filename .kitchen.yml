@@ -18,17 +18,19 @@ provisioner:
         - medicaloffice
 
 platforms:
-  - name: windows-7
+  # - name: windows-10
+  #   transport:
+  #     name: winrm
+  #   driver:
+  #     guest: :windows
+  #     box: gusztavvargadr/windows-10
+  #     gui: true
+  - name: windows-7a
     transport:
       name: winrm
     driver:
       guest: :windows
-      box: gusztavvargadr/windows-10
-      # box_download_checksum: d2c82deac4b419956c31a0fed74b17de26bf3d7b1bb24ffc8132bb78a0172e24
-      # box_download_checksum_type: sha256
-      # winrm:
-      #   username: test
-      #   password: password1234
+      box: walkeymj/windows-7
       gui: true
   # - name: centos
   #   driver_config:
