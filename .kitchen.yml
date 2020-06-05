@@ -1,8 +1,8 @@
 ---
 driver:
-  name: docker
-  use_sudo: false
-  privileged: true
+  name: vagrant
+  # network:
+  # - ["public_network", bridge: "Default Switch"]
 
 provisioner:
   name: salt_solo
@@ -18,9 +18,21 @@ provisioner:
         - medicaloffice
 
 platforms:
-  - name: centos
-    driver_config:
-      run_command: /usr/lib/systemd/systemd
+  - name: windows-7
+    transport:
+      name: winrm
+    driver:
+      guest: :windows
+      box: gusztavvargadr/windows-10
+      # box_download_checksum: d2c82deac4b419956c31a0fed74b17de26bf3d7b1bb24ffc8132bb78a0172e24
+      # box_download_checksum_type: sha256
+      # winrm:
+      #   username: test
+      #   password: password1234
+      gui: true
+  # - name: centos
+  #   driver_config:
+  #     run_command: /usr/lib/systemd/systemd
 
 suites:
   - name: default
@@ -30,7 +42,7 @@ suites:
           '*':
           - medicaloffice
 
-verifier:
-  name: shell
-  remote_exec: false
-  command: .venv/bin/py.test -v  --connection=docker  --hosts=root@$KITCHEN_CONTAINER_ID --html=reports/$KITCHEN_INSTANCE.html --self-contained-html --junit-xml=reports/junit-$KITCHEN_INSTANCE.xml tests/integration/$KITCHEN_SUITE
+# verifier:
+#   name: shell
+#   remote_exec: false
+#   command: .venv/bin/py.test -v  --connection=docker  --hosts=root@$KITCHEN_CONTAINER_ID --html=reports/$KITCHEN_INSTANCE.html --self-contained-html --junit-xml=reports/junit-$KITCHEN_INSTANCE.xml tests/integration/$KITCHEN_SUITE

@@ -1,5 +1,7 @@
+
 medicaloffice:
-  your: mother
-  is:
-  - fat
-  - old 
+  source: https://download.indamed.de/download.php?webcode=voll
+  source_hash: 3e30e484e38b9939b8d01998258c56df
+
+  firebird_db:
+    source: https://github.com/FirebirdSQL/firebird/releases/download/R3_0_5/Firebird-3.0.5.33220_0_x64.exe
