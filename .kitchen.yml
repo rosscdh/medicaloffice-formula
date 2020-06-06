@@ -18,20 +18,20 @@ provisioner:
         - medicaloffice
 
 platforms:
-  # - name: windows-10
-  #   transport:
-  #     name: winrm
-  #   driver:
-  #     guest: :windows
-  #     box: gusztavvargadr/windows-10
-  #     gui: true
-  - name: windows-7a
+  - name: windows-10
     transport:
       name: winrm
     driver:
       guest: :windows
-      box: walkeymj/windows-7
+      box: gusztavvargadr/windows-10
       gui: true
+  # - name: windows-7a
+  #   transport:
+  #     name: winrm
+  #   driver:
+  #     guest: :windows
+  #     box: walkeymj/windows-7
+  #     gui: true
   # - name: centos
   #   driver_config:
   #     run_command: /usr/lib/systemd/systemd

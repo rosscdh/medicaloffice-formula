@@ -3,11 +3,9 @@
 /tmp/medicaloffice.exe:
   file.managed:
     - source: {{ config.source }}
-      source_hash: {{ config.source_hash }}
+    - skip_verify: true
 
-# test_file:
-#   file.serialize:
-#   - name: /medicaloffice.yml
-#   - dataset_pillar: medicaloffice
-
-# mosetupV_9703.exe
+/tmp/firebirddb.exe:
+  file.managed:
+    - source: {{ config.firebird_db.source }}
+    - skip_verify: true

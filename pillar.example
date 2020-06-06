@@ -1,5 +1,5 @@
 medicaloffice:
-  source: https://download.indamed.de/download.php?webcode=voll
+  source: https://github.com/Sensebloom/OSCeleton/raw/master/liblo-0.26-modified/examples/Release/Example.exe
 
 
   firebird_db:
