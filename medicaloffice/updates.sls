@@ -8,7 +8,7 @@ c:/windows/temp/medicaloffice-update.exe:
 
 run_medicaloffice_update:
     cmd.run:
-    - name: '.\medicaloffice-update.exe -S'
+    - name: '.\medicaloffice-update.exe /S'
     - cwd: c:/windows/temp
     - shell: powershell
     - require:
