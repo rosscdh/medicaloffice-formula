@@ -13,6 +13,6 @@ run_medicaloffice_update:
     - shell: powershell
     - require:
       - file: c:/windows/temp/medicaloffice-update.exe
-      - file: C:/INDAMED/convert.exe
+    #   - file: C:/INDAMED/convert.exe
     - watch:
       - file: c:/windows/temp/medicaloffice-update.exe
