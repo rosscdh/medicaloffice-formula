@@ -1,6 +1,7 @@
 {% from "medicaloffice/map.jinja" import config with context %}
+{% set settings = config.base %}
 
 /tmp/medicaloffice.exe:
   file.managed:
-    - source: {{ config.base.source }}
+    - source: {{ settings.source }}
     - skip_verify: true
