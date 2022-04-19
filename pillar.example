@@ -1,6 +1,7 @@
 medicaloffice:
-  source: https://github.com/Sensebloom/OSCeleton/raw/master/liblo-0.26-modified/examples/Release/Example.exe
+  # https://download.indamed.de/download.php?webcode=voll
+  base:
+    source: https://assets.bienert.tech/minio/public-repo/medical-office/base/moupd-0.0.0.exe
 
-
-  firebird_db:
-    source: https://github.com/FirebirdSQL/firebird/releases/download/R3_0_5/Firebird-3.0.5.33220_0_x64.exe
+  update:
+    source: https://assets.bienert.tech/minio/public-repo/medical-office/updates/moupd-0.0.0.exe
