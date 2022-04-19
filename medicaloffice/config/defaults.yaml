@@ -3,5 +3,5 @@ medicaloffice:
   base:
     source: https://assets.bienert.tech/minio/public-repo/medical-office/base/moupd-0.0.0.exe
 
-  update:
+  updates:
     source: https://assets.bienert.tech/minio/public-repo/medical-office/updates/moupd13944.exe

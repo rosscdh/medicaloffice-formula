@@ -1,9 +1,9 @@
 {% from "medicaloffice/map.jinja" import config with context %}
-{% set settings = config.update %}
+{% set settings = config.updates %}
 
 c:/windows/temp/medicaloffice-update.exe:
   file.managed:
-    - source: {{ settings.get('source') }}
+    - source: {{ settings.source }}
     - skip_verify: true
 
 run_medicaloffice_update:
