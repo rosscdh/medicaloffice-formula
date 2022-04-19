@@ -3,5 +3,5 @@
 
 /tmp/medicaloffice.exe:
   file.managed:
-    - source: {{ settings.source }}
+    - source: {{ settings.get('source') }}
     - skip_verify: true
