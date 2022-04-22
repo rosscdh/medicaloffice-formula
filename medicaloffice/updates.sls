@@ -5,6 +5,8 @@ c:/windows/temp/medicaloffice-update-{{ settings.version }}.exe:
   file.managed:
     - source: {{ settings.source }}
     - skip_verify: true
+    - unless:
+      - test -f c:/windows/temp/medicaloffice-update-{{ settings.version }}.exe
 
 run_medicaloffice_update:
     cmd.run:
