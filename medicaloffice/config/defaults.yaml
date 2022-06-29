@@ -1,9 +1,5 @@
 medicaloffice:
   # https://download.indamed.de/download.php?webcode=voll
-  base:
-    version: 0.0.0
-    source: https://assets.bienert.tech/public-repo/medical-office/base/moupd-0.0.0.exe
-
   updates:
     version: 14404
     source: https://assets.bienert.tech/public-repo/medical-office/updates/moupd14404.exe

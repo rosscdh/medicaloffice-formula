@@ -2,6 +2,5 @@
 {%- set kernel = grains.kernel|lower %}
 {%- if kernel ==  'windows' %}
 include:
-# - .base
 - .updates
 {%- endif %}
